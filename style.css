@@ -46,19 +46,23 @@ header {
 .intro {
   margin-top: 50px;
   color: var(--fg);
+  display: inline-block;
 }
-.intro > p {
-  font-size: 3em;
+.intro-title {
+  font-size: 4rem;
   margin: 0;
+}
+.intro-role {
+  color: var(--blue);
 }
 .social {
   margin: 10px 0;
 }
 .social > a {
   text-decoration: none;
-  color: var(--blue);
+  color: var(--aqua);
   padding-right: 20px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .social > a:hover {
   text-decoration: underline;
@@ -76,6 +80,11 @@ header {
 }
 .btn:hover {
   background-color: var(--purple);
+  color: var(--fg);
+}
+.project-desc {
+  font-size: 2rem;
+  margin-top: 50px;
   color: var(--fg);
 }
 /* Projects Start */
@@ -99,6 +108,7 @@ header {
 .projects .row-1 {
   justify-content: flex-start;
 }
+
 .projects .row-2 {
   justify-content: flex-end;
 }
@@ -114,15 +124,41 @@ header {
   width: calc(50% - 60px);
   padding: 10px;
   position: relative;
+  color: #fff;
+  font-size: 24px;
 }
 .projects .row section::before {
   position: absolute;
   content: "";
   height: 15px;
   width: 15px;
-  background: var(--aqua);
+  background: var(--blue);
   top: 28px;
   transform: rotate(45deg);
+}
+.projects .row-1 section {
+  background-color: var(--blue);
+  &:before {
+    background: var(--blue);
+  }
+}
+.projects .row-2 section {
+  background-color: var(--red);
+  &:before {
+    background: var(--red);
+  }
+}
+.projects .row-3 section {
+  background-color: var(--aqua);
+  &:before {
+    background: var(--aqua);
+  }
+}
+.projects .row-4 section {
+  background-color: var(--purple);
+  &:before {
+    background: var(--purple);
+  }
 }
 .row-1 section::before {
   right: -7px;
@@ -176,6 +212,9 @@ header {
 .row section .bottom {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+.row section .details {
   justify-content: space-between;
 }
 .row section .details .title {
@@ -188,7 +227,7 @@ header {
 .row section .bottom a {
   text-decoration: none;
   background: var(--bg);
-  color: var(--purple);
+  color: var(--fg);
   padding: 7px 15px;
   border-radius: 5px;
   font-size: 17px;
@@ -228,5 +267,28 @@ header {
   }
   .projects .row {
     margin: 10px 0;
+  }
+}
+
+/* Typing */
+.typing {
+  font-size: 4rem;
+  margin: 0;
+  border-right: 2px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(26), cursor 0.4s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color: transparent;
   }
 }
