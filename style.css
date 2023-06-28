@@ -1,0 +1,232 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  --bg: #282828;
+  --gray: #928374;
+  --red: #fb4934;
+  --green: #b8bb26;
+  --yellow: #fabd2f;
+  --blue: #83a598;
+  --purple: #d3869b;
+  --aqua: #8ec07c;
+  --fg: #ebdbb2;
+  background-color: var(--bg);
+  font-family: "Agdasima", sans-serif;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header {
+  display: flex;
+  justify-content: end;
+}
+.nav-top {
+  font-size: 25px;
+  padding: 20px;
+  > * {
+    padding-left: 20px;
+    color: var(--purple);
+    text-decoration: none;
+  }
+  > *:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--aqua);
+  }
+}
+.intro {
+  margin-top: 50px;
+  color: var(--fg);
+}
+.intro > p {
+  font-size: 3em;
+  margin: 0;
+}
+.social {
+  margin: 10px 0;
+}
+.social > a {
+  text-decoration: none;
+  color: var(--blue);
+  padding-right: 20px;
+  font-size: 20px;
+}
+.social > a:hover {
+  text-decoration: underline;
+  color: var(--aqua);
+}
+.btn {
+  display: inline-block;
+  color: var(--purple);
+  border: 2px solid var(--purple);
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  margin-top: 8px;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: var(--purple);
+  color: var(--fg);
+}
+/* Projects Start */
+.projects {
+  width: 100%;
+  margin: 50px auto;
+  position: relative;
+}
+.projects .center-line {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: var(--fg);
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.projects .row {
+  display: flex;
+}
+.projects .row-1 {
+  justify-content: flex-start;
+}
+.projects .row-2 {
+  justify-content: flex-end;
+}
+.projects .row-3 {
+  justify-content: flex-start;
+}
+.projects .row-4 {
+  justify-content: flex-end;
+}
+.projects .row section {
+  background: var(--aqua);
+  border-radius: 5px;
+  width: calc(50% - 60px);
+  padding: 10px;
+  position: relative;
+}
+.projects .row section::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: var(--aqua);
+  top: 28px;
+  transform: rotate(45deg);
+}
+.row-1 section::before {
+  right: -7px;
+}
+.row-2 section::before {
+  left: -7px;
+}
+.row-3 section::before {
+  right: -7px;
+}
+.row-4 section::before {
+  left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon {
+  position: absolute;
+  background: var(--fg);
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--bg);
+  font-size: 17px;
+  box-shadow: 0 0 0 4px var(--fg), inset 0 2px 0 rgb(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.5);
+}
+.center-line .scroll-icon {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+}
+.row-1 section .icon {
+  top: 13px;
+  right: -60px;
+}
+.row-2 section .icon {
+  top: 13px;
+  left: -60px;
+}
+.row-3 section .icon {
+  top: 13px;
+  right: -60px;
+}
+.row-4 section .icon {
+  top: 13px;
+  left: -60px;
+}
+.row section .details,
+.row section .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.row section .details .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.row section p {
+  margin: 10px 0 17px 0;
+}
+.row section .bottom a {
+  text-decoration: none;
+  background: var(--bg);
+  color: var(--purple);
+  padding: 7px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 400;
+}
+/* Projects End */
+@media (max-width: 772px) {
+  .projects .center-line {
+    left: 20px;
+    bottom: 0;
+    transform: translateY(20px);
+  }
+  .projects .row {
+    margin: 30px 0 3px 60px;
+  }
+  .projects .row section {
+    width: 100%;
+  }
+  .row-1 section::before {
+    left: -7px;
+  }
+  .row-1 section .icon {
+    left: -60px;
+  }
+  .row-3 section::before {
+    left: -7px;
+  }
+  .row-3 section .icon {
+    left: -60px;
+  }
+}
+@media (max-width: 480px) {
+  .projects .center-line,
+  .row section::before,
+  .row section .icon {
+    display: none;
+  }
+  .projects .row {
+    margin: 10px 0;
+  }
+}
