@@ -83,14 +83,19 @@ header {
   color: var(--fg);
 }
 .project-desc {
-  font-size: 2rem;
   margin-top: 50px;
   color: var(--fg);
+}
+.project-desc > span {
+  font-size: 4rem;
+}
+.project-desc > p {
+  font-size: 2rem;
 }
 /* Projects Start */
 .projects {
   width: 100%;
-  margin: 30px auto;
+  margin-bottom: 50px;
   position: relative;
 }
 .projects .center-line {
@@ -119,12 +124,13 @@ header {
   justify-content: flex-end;
 }
 .projects .row section {
-  background: var(--gray);
+  background: var(--bg);
   border-radius: 5px;
+  border: 1px var(--fg) solid;
   width: calc(50% - 60px);
   padding: 10px;
   position: relative;
-  color: white;
+  color: var(--fg);
   font-size: 24px;
 }
 .projects .row section::before {
@@ -132,45 +138,24 @@ header {
   content: "";
   height: 15px;
   width: 15px;
-  background: var(--gray);
+  border: 1px solid var(--fg);
   top: 28px;
   transform: rotate(45deg);
+  overflow: hidden;
+  z-index: -1;
 }
-/* .projects .row-1 section {
-  background-color: var(--aqua);
-  &:before {
-    background: var(--aqua);
-  }
-}
-.projects .row-2 section {
-  background-color: var(--blue);
-  &:before {
-    background: var(--blue);
-  }
-}
-.projects .row-3 section {
-  background-color: var(--red);
-  &:before {
-    background: var(--red);
-  }
-}
-.projects .row-4 section {
-  background-color: var(--green);
-  &:before {
-    background: var(--green);
-  }
-} */
+
 .row-1 section::before {
-  right: -7px;
+  right: -9px;
 }
 .row-2 section::before {
-  left: -7px;
+  left: -9px;
 }
 .row-3 section::before {
-  right: -7px;
+  right: -9px;
 }
 .row-4 section::before {
-  left: -7px;
+  left: -9px;
 }
 .row section .icon,
 .center-line .scroll-icon {
@@ -227,11 +212,17 @@ header {
 .row section .bottom a {
   text-decoration: none;
   background: var(--bg);
-  color: var(--fg);
+  color: var(--aqua);
   padding: 7px 15px;
   border-radius: 5px;
+  border: 1px solid var(--aqua);
   font-size: 17px;
   font-weight: 400;
+  text-transform: uppercase;
+}
+.row section .bottom a:hover {
+  background: var(--aqua);
+  color: var(--fg);
 }
 /* Projects End */
 /* Typing */
@@ -246,7 +237,7 @@ header {
 }
 .project-img-container > img {
   width: 100%;
-  max-height: 200px;
+  max-height: 250px;
   margin-top: 10px;
 }
 /* About */
@@ -290,13 +281,13 @@ header {
     width: 100%;
   }
   .row-1 section::before {
-    left: -7px;
+    left: -9px;
   }
   .row-1 section .icon {
     left: -60px;
   }
   .row-3 section::before {
-    left: -7px;
+    left: -9px;
   }
   .row-3 section .icon {
     left: -60px;
@@ -310,7 +301,11 @@ header {
   .nav-top {
     font-size: 22px;
   }
-  .project-desc {
+
+  .project-desc > span {
+    font-size: 2rem;
+  }
+  .project-desc > p {
     font-size: 1.5rem;
   }
   .social > a {
