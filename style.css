@@ -281,6 +281,9 @@ header {
   color: var(--aqua);
 }
 @media (max-width: 772px) {
+  .container {
+    width: 90%;
+  }
   .projects .center-line {
     left: 20px;
     bottom: 0;
