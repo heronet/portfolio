@@ -19,7 +19,8 @@ body {
   scroll-behavior: smooth;
 }
 .container {
-  max-width: 80%;
+  width: 80%;
+  max-width: 1080px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -28,25 +29,30 @@ body {
 header {
   display: flex;
   justify-content: end;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--bg);
 }
 .nav-top {
   font-size: 25px;
   padding: 20px;
-  > * {
-    padding-left: 20px;
-    color: var(--purple);
-    text-decoration: none;
-  }
-  > *:hover {
-    cursor: pointer;
-    text-decoration: underline;
-    color: var(--aqua);
-  }
+}
+.nav-top > * {
+  padding-left: 20px;
+  color: var(--purple);
+  text-decoration: none;
+}
+.nav-top > *:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--aqua);
 }
 .intro {
   margin-top: 50px;
   color: var(--fg);
   display: inline-block;
+  padding: 0 5px;
 }
 .intro-title {
   font-size: 4rem;
@@ -56,7 +62,8 @@ header {
   color: var(--blue);
 }
 .social {
-  margin: 10px 0;
+  margin-bottom: 10px;
+  padding: 0 5px;
 }
 .social > a {
   text-decoration: none;
@@ -84,6 +91,7 @@ header {
 }
 .project-desc {
   margin-top: 50px;
+  padding: 0 5px;
   color: var(--fg);
 }
 .project-desc > span {
@@ -94,8 +102,10 @@ header {
 }
 /* Projects Start */
 .projects {
-  width: 100%;
-  margin-bottom: 50px;
+  width: 95%;
+  margin: 50px auto;
+  margin-top: 0;
+  padding: 0 5px;
   position: relative;
 }
 .projects .center-line {
@@ -243,6 +253,7 @@ header {
 /* About */
 .about {
   margin-top: 50px;
+  padding: 0 5px;
   color: var(--fg);
 }
 .about > span {
@@ -255,6 +266,7 @@ header {
 .skills {
   color: var(--fg);
   margin-top: 50px;
+  padding: 0 5px;
 }
 .skills > span {
   font-size: 4rem;
@@ -284,13 +296,19 @@ header {
     left: -9px;
   }
   .row-1 section .icon {
-    left: -60px;
+    left: -64px;
+  }
+  .row-2 section .icon {
+    left: -64px;
   }
   .row-3 section::before {
     left: -9px;
   }
   .row-3 section .icon {
-    left: -60px;
+    left: -64px;
+  }
+  .row-4 section .icon {
+    left: -64px;
   }
   .intro-title {
     font-size: 2.5rem;
