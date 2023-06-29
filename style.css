@@ -137,27 +137,27 @@ header {
   transform: rotate(45deg);
 }
 .projects .row-1 section {
-  background-color: var(--blue);
-  &:before {
-    background: var(--blue);
-  }
-}
-.projects .row-2 section {
-  background-color: var(--red);
-  &:before {
-    background: var(--red);
-  }
-}
-.projects .row-3 section {
   background-color: var(--aqua);
   &:before {
     background: var(--aqua);
   }
 }
-.projects .row-4 section {
-  background-color: var(--purple);
+.projects .row-2 section {
+  background-color: var(--blue);
   &:before {
-    background: var(--purple);
+    background: var(--blue);
+  }
+}
+.projects .row-3 section {
+  background-color: var(--red);
+  &:before {
+    background: var(--red);
+  }
+}
+.projects .row-4 section {
+  background-color: var(--green);
+  &:before {
+    background: var(--green);
   }
 }
 .row-1 section::before {
