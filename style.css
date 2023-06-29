@@ -90,7 +90,7 @@ header {
 /* Projects Start */
 .projects {
   width: 100%;
-  margin: 50px auto;
+  margin: 30px auto;
   position: relative;
 }
 .projects .center-line {
@@ -119,12 +119,12 @@ header {
   justify-content: flex-end;
 }
 .projects .row section {
-  background: var(--aqua);
+  background: var(--gray);
   border-radius: 5px;
   width: calc(50% - 60px);
   padding: 10px;
   position: relative;
-  color: #fff;
+  color: white;
   font-size: 24px;
 }
 .projects .row section::before {
@@ -132,11 +132,11 @@ header {
   content: "";
   height: 15px;
   width: 15px;
-  background: var(--blue);
+  background: var(--gray);
   top: 28px;
   transform: rotate(45deg);
 }
-.projects .row-1 section {
+/* .projects .row-1 section {
   background-color: var(--aqua);
   &:before {
     background: var(--aqua);
@@ -159,7 +159,7 @@ header {
   &:before {
     background: var(--green);
   }
-}
+} */
 .row-1 section::before {
   right: -7px;
 }
@@ -244,11 +244,38 @@ header {
   overflow: hidden;
   animation: typing 2s steps(26), cursor 0.4s step-end infinite alternate;
 }
-
 .project-img-container > img {
   width: 100%;
-  max-height: 450px;
+  max-height: 200px;
   margin-top: 10px;
+}
+/* About */
+.about {
+  margin-top: 50px;
+  color: var(--fg);
+}
+.about > span {
+  font-size: 4rem;
+}
+.about > p {
+  font-size: 2rem;
+}
+/* Skills */
+.skills {
+  color: var(--fg);
+  margin-top: 50px;
+}
+.skills > span {
+  font-size: 4rem;
+}
+.skills > p {
+  font-size: 2rem;
+}
+.skills > ol {
+  font-size: 1.5rem;
+}
+.skills > ol > li > span {
+  color: var(--aqua);
 }
 @media (max-width: 772px) {
   .projects .center-line {
@@ -288,6 +315,21 @@ header {
   }
   .social > a {
     font-size: 20px;
+  }
+  .about > span {
+    font-size: 2rem;
+  }
+  .about > p {
+    font-size: 1.5rem;
+  }
+  .skills > span {
+    font-size: 2rem;
+  }
+  .skills > p {
+    font-size: 1.5rem;
+  }
+  .skills > ol {
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 480px) {
