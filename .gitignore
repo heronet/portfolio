@@ -1,1 +1,5 @@
 /public/resume.pdf
+.firebase
+.firebaserc
+firebase.json
+404.html

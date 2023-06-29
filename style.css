@@ -234,6 +234,17 @@ header {
   font-weight: 400;
 }
 /* Projects End */
+
+/* Typing */
+.typing {
+  font-size: 4rem;
+  margin: 0;
+  border-right: 2px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(26), cursor 0.4s step-end infinite alternate;
+}
 @media (max-width: 772px) {
   .projects .center-line {
     left: 20px;
@@ -258,6 +269,21 @@ header {
   .row-3 section .icon {
     left: -60px;
   }
+  .intro-title {
+    font-size: 2.5rem;
+  }
+  .typing {
+    font-size: 2rem;
+  }
+  .nav-top {
+    font-size: 22px;
+  }
+  .project-desc {
+    font-size: 1.5rem;
+  }
+  .social > a {
+    font-size: 20px;
+  }
 }
 @media (max-width: 480px) {
   .projects .center-line,
@@ -268,17 +294,6 @@ header {
   .projects .row {
     margin: 10px 0;
   }
-}
-
-/* Typing */
-.typing {
-  font-size: 4rem;
-  margin: 0;
-  border-right: 2px solid;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 2s steps(26), cursor 0.4s step-end infinite alternate;
 }
 
 @keyframes typing {
