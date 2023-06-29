@@ -234,7 +234,6 @@ header {
   font-weight: 400;
 }
 /* Projects End */
-
 /* Typing */
 .typing {
   font-size: 4rem;
@@ -244,6 +243,12 @@ header {
   white-space: nowrap;
   overflow: hidden;
   animation: typing 2s steps(26), cursor 0.4s step-end infinite alternate;
+}
+
+.project-img-container > img {
+  width: 100%;
+  max-height: 450px;
+  margin-top: 10px;
 }
 @media (max-width: 772px) {
   .projects .center-line {
