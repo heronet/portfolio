@@ -217,16 +217,22 @@ header {
   font-weight: 600;
 }
 .row section p {
-  margin: 10px 0 17px 0;
+  margin: 10px 0;
+}
+.row section p .tech {
+  color: var(--aqua);
+}
+.row section p .tech-list {
+  color: var(--blue);
 }
 .row section .bottom a {
   text-decoration: none;
   background: var(--bg);
   color: var(--aqua);
-  padding: 7px 15px;
+  padding: 5px;
   border-radius: 5px;
   border: 1px solid var(--aqua);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
 }
