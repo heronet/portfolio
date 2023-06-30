@@ -209,6 +209,9 @@ header {
   align-items: center;
   gap: 10px;
 }
+.row section .bottom {
+  margin-top: 20px;
+}
 .row section .details {
   justify-content: space-between;
 }
